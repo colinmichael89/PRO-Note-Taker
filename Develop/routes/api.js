@@ -3,7 +3,6 @@ const express = require("express");
 const { v4: uuidv4 } = require("uuid");
 const notes = require("../db/db.json");
 
-let data = JSON.parse(fs.readFileSync("../db/db.json", "utf8"));
 const app = express();
 
 // API GET Request
