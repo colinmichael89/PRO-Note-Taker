@@ -9,7 +9,7 @@ This application allows the user to write and save notes to assist in oraganizat
 ## Table of Contents
 
 - [Installation](#installation)
-- [Demonstration](#demonstration)
+- [Screenshots](#screenshots)
 - [License](#license)
 - [Contributing](#contributing)
 - [Tests](#tests)
@@ -23,9 +23,10 @@ To install dependencies, run the following:
 npm i
 ```
 
-## Demonstration
+## Screenshots
 
-[Video Demonstration]()
+[Homepage](./images/2022-09-09.png)  
+[Notes Page](<./images/2022-09-09%20(1).png>)
 
 ## License
 
@@ -34,14 +35,6 @@ This repository is licensed under the Unlicense license.
 ## Contributing
 
 This repository is not accepting contributions
-
-## Tests
-
-To run tests, run the following:
-
-```
-npm run test
-```
 
 ## Questions
 
