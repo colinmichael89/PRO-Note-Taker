@@ -10,9 +10,9 @@ This application allows the user to write and save notes to assist in oraganizat
 
 - [Installation](#installation)
 - [Screenshots](#screenshots)
+- [Application](#application)
 - [License](#license)
 - [Contributing](#contributing)
-- [Tests](#tests)
 - [Questions](#questions)
 
 ## Installation
@@ -27,6 +27,11 @@ npm i
 
 [Homepage](./images/2022-09-09.png)  
 [Notes Page](<./images/2022-09-09%20(1).png>)
+
+## Application
+
+[Link to Application](https://afternoon-fortress-91169.herokuapp.com/notes)  
+[Link to Github](https://github.com/colinmichael89/PRO-Note-Taker.git)
 
 ## License
 
