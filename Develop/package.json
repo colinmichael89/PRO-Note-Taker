@@ -1,7 +1,6 @@
 {
   "name": "pro-note-taker",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
@@ -15,5 +14,7 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }

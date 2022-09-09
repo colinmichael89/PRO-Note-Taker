@@ -1,44 +1,44 @@
 const fs = require("fs");
 const express = require("express");
 const { v4: uuidv4 } = require("uuid");
+const notes = require("../db/db.json");
 
+let data = JSON.parse(fs.readFileSync("../db/db.json", "utf8"));
 const app = express();
-const savedNotes = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
-const newNote = require.body;
 
 // API GET Request
 app.get("/api/notes", (req, res) => {
-  console.info(`\nExecuting ${req.method} notes request`),
-    res.sendFile(savedNotes);
+  console.info(`\nExecuting ${req.method} notes request`);
+  // Read File
+  let data = JSON.parse(fs.readFileSync(notes, "utf8"));
+  res.json(data);
 });
 
 // API POST Request
 app.post("/api/notes", (req, res) => {
-  console.log(
-    `\nExecuting ${req.method} - New Note : ` + JSON.stringify(newNote)
-  );
+  const newNote = req.body;
+  console.log(`\nExecuting ${req.method} of New Note`);
   // Create uuid
   newNote.id = uuidv4();
-  // Save note
-  savedNotes.push(newNote);
+  // Read file
+  let data = JSON.parse(fs.readFileSync(notes, "utf8"));
+  data.push(newNote);
   // Write note
-  fs.writeFileSync("./db/db.json", JSON.stringify(newNote));
+  fs.writeFileSync("../db/db.json", JSON.stringify(data));
   console.info("\nNew note successfully added!");
-  res.json(savedNotes);
+  res.json(data);
 });
-
 // API DELETE request
 app.delete("/api/notes/:id", (req, res) => {
   // Fetch requested note by id
   let noteId = req.params.id.toString();
   console.info(`\n${req.method} request for noteId: ${noteId}`);
-
-  // Read data from 'db.json' file
-  let data = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
+  // Read file
+  let data = JSON.parse(fs.readFileSync(notes, "utf8"));
   const newData = data.filter((note) => note.id.toString() !== noteId);
 
-  // Write new data to 'db.json' file
-  fs.writeFileSync("./db/db.json", JSON.stringify(newData));
+  // Write to file
+  fs.writeFileSync("../db/db.json", JSON.stringify(newData));
 
   console.info(`\nSuccessfully deleted note with id : ${noteId}`);
 
